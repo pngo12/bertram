@@ -14,5 +14,3 @@ EXPOSE 9000
 EXPOSE 9001
 
 ENTRYPOINT ["dotnet", "WhoseTurn.dll"]
-
-docker run --rm -p 9000:9000 -p 9001:9001 -e ASPNETCORE_ENVIRONMENT=Development -e ASPNETCORE_URLS="http://+:9000" whoseturn
