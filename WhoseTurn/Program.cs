@@ -21,7 +21,7 @@ builder.Services.AddDbContextPool<DeterminantContext>(opt =>
     opt.UseNpgsql(dataSource));
 
 builder.Services
-     .AddScoped<IDeterminantManager, DeterminantManager>()
+    .AddScoped<IDeterminantManager, DeterminantManager>()
     .AddScoped<IDeterminantRepository, DeterminantRepository>()
 ;
 
@@ -41,5 +41,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-// 3WFO3z2bO6knMysC
