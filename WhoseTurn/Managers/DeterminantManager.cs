@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using WhoseTurn.DataModels;
 using WhoseTurn.Models;
 using WhoseTurn.Repositories;
