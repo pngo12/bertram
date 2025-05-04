@@ -22,10 +22,7 @@ public class DeterminantManager : IDeterminantManager
         {
             // Load everyone in the request
             var listOfPeopleToLoad = request.Persons.Select(x => x.Id).ToList();
-            
             var personsList = await _data.GetAllPersons(listOfPeopleToLoad);
-            personsList = personsList.OrderBy(x => x.TotalAmountPaid).ToList();
-            
             var personToPay = personsList.First();
             
             decimal total = 0.00m;
