@@ -17,3 +17,18 @@
 
 # Approach
 I went with a price weighted approach. Whoever is in the order will have their past "total amount paid" queried for and we'll subtract their order from the order total. This gives us what the person is paying for everyone else. I believe this to be most "fair", so that someone who orders a $35 coffee isn't skewing the order total.
+
+# Shape of Data
+The shape of the request is a an object of lists: <br>
+```
+{
+  "persons": [
+    {
+      "id": 0, // INT
+      "name": "string", // STRING
+      "itemOrderedAmount": 0 // DECIMAL
+    }
+  ]
+}
+```
+The easiest way would be to make a GET request to get the ids needed, and then fill in all the people who are getting coffee
